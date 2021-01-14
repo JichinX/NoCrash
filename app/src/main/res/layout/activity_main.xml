@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/main_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="performMainThreadError"
+        android:text="主线程崩溃"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sub_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="performSubThreadError"
+        android:text="子线程崩溃"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_error" />
+
+    <Button
+        android:id="@+id/toast_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="performToast"
+        android:text="Toast"
+        app:layout_constraintBottom_toTopOf="@id/main_error"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/new_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toNewActivity"
+        android:text="New Activity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sub_error" />
+
+    <Button
+        android:id="@+id/error_check_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toErrorCheckActivity"
+        android:text="查看错误日志"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/new_activity" />
+
+    <Button
+        android:id="@+id/clear_error_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clearErrorLog"
+        android:text="清除错误日志"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/error_check_activity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

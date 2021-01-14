@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_package = "com.xujichang.nocrash";
+option java_multiple_files = true;
+
+message ErrorInfo {
+  string errorInfo=1;
+  string deviceInfo=2;
+  string networkInfo=3;
+  string requestInfo=4;
+  string activitiesInfo=5;
+  string runtimeInfo=6;
+}
